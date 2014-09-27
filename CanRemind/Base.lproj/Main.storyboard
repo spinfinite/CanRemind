@@ -22,6 +22,21 @@
                                 <state key="normal" title="Remind me in 10 Seconds">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="scheduleReminder:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VNu-LH-HWK"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="KtC-s7-xZ6">
+                                <rect key="frame" x="0.0" y="406" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="433518364.08644998">
+                                    <!--2014-09-27 13:46:04 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4b-Aj-xdK">
+                                <rect key="frame" x="137" y="336" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -31,6 +46,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="KtC-s7-xZ6" id="oir-K3-5jU"/>
                         <outlet property="scheduleReminder" destination="5Xi-9l-RDo" id="fdt-qZ-Pox"/>
                     </connections>
                 </viewController>

@@ -10,6 +10,7 @@
 
 @interface CRViewController ()
 
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (strong, nonatomic) IBOutlet UIButton *scheduleReminder;
 @end
 
@@ -23,7 +24,7 @@
 
 
 - (IBAction)scheduleReminder:(id)sender{
-    
+    //Shift now by 10 seconds
     NSDate *date = [[NSDate date] dateByAddingTimeInterval:10];
     
     UILocalNotification *notification = [[UILocalNotification alloc] init];
@@ -33,11 +34,8 @@
     notification.repeatInterval = 0;
     notification.soundName = @"bell_tree.mp3";
     notification.applicationIconBadgeNumber = 1;
-    
-    notification.alertBody = @"Hey Heres a local notification";
-    
-    //[[UIApplication sharedApplication] scheduledLocalNotification:LocalNotification];
-   //[[UIApplication sharedApplication] scheduledLocalNotification:LocalNotification];
+    notification.alertBody = @"Hey Heres a local notification!";
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
 
